@@ -9,9 +9,11 @@ import Foundation
 import UIKit
 
 extension UIView {
-    func makeSecure() {
+    
+    @discardableResult func makeSecure() -> UITextField {
+        
+        let field = UITextField()
         DispatchQueue.main.async {
-            let field = UITextField()
             field.isSecureTextEntry = true
             self.addSubview(field)
             field.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
@@ -19,5 +21,6 @@ extension UIView {
             self.layer.superlayer?.addSublayer(field.layer)
             field.layer.sublayers?.first?.addSublayer(self.layer)
         }
+        return field
     }
 }

@@ -10,6 +10,16 @@ import UIKit
 
 class SecureView: UIView {
     
+    fileprivate var secureField: UITextField!
+        
+    // toggle this value to enable or disable
+    // the secure behaviour
+    var isSecure: Bool = true {
+        didSet {
+            secureField.isSecureTextEntry = isSecure
+        }
+    }
+    
     // placeholder will become visible when user try to capture screenshot
     // or try to record the screen
     private(set) var placeholderView: UIView = {
@@ -23,7 +33,7 @@ class SecureView: UIView {
     // it will be secure
     private(set) var contentView: UIView = {
         let hiddenView = UIView()
-        hiddenView.makeSecure()
+//        hiddenView.makeSecure()
         hiddenView.translatesAutoresizingMaskIntoConstraints = false
         return hiddenView
     }()
@@ -33,12 +43,14 @@ class SecureView: UIView {
         setupView()
     }
     
-    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
     fileprivate func setupView() {
+        
+        // set content view secure
+        secureField = contentView.makeSecure()
         
         self.addSubview(placeholderView)
         self.addSubview(contentView)

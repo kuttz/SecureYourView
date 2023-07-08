@@ -9,14 +9,26 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var secureView: SecureView!
+    fileprivate var secureView: SecureView!
+    
+    fileprivate var toggleSwitch: UISwitch = UISwitch()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     
         secureView = SecureView()
         secureView.translatesAutoresizingMaskIntoConstraints = false
+        
+        toggleSwitch.addTarget(self, action: #selector(onSWitchChange), for: .valueChanged)
+        toggleSwitch.isOn = true
+        let label = UILabel()
+        label.text = "Secure "
+        
+        let stack = UIStackView(arrangedSubviews: [label, toggleSwitch])
+        stack.axis = .horizontal
+        stack.distribution = .fill
+        stack.alignment = .fill
+        stack.translatesAutoresizingMaskIntoConstraints = false
         
         let imageView = UIImageView()
         imageView.image = UIImage(named: "sample")
@@ -35,6 +47,7 @@ class ViewController: UIViewController {
         secureView.placeholderView.addSubview(placeholderText)
         
         self.view.addSubview(secureView)
+        self.view.addSubview(stack)
         
         NSLayoutConstraint.activate([
             secureView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
@@ -47,10 +60,15 @@ class ViewController: UIViewController {
             imageView.bottomAnchor.constraint(equalTo: secureView.bottomAnchor),
             placeholderText.centerXAnchor.constraint(equalTo: secureView.centerXAnchor),
             placeholderText.centerYAnchor.constraint(equalTo: secureView.centerYAnchor),
+            stack.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor, constant: 16),
+            stack.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: -16),
         ])
         
     }
-
+    
+    @objc fileprivate func onSWitchChange() {
+        secureView.isSecure = toggleSwitch.isOn
+    }
 
 }
 
