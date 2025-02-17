@@ -14,7 +14,6 @@
 		5B3F07C62A2A1B5300F6AEB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B3F07C52A2A1B5300F6AEB2 /* Assets.xcassets */; };
 		5B3F07C92A2A1B5300F6AEB2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B3F07C72A2A1B5300F6AEB2 /* LaunchScreen.storyboard */; };
 		5B3F07D12A2A1B6800F6AEB2 /* SecureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3F07D02A2A1B6800F6AEB2 /* SecureView.swift */; };
-		5B3F07D32A2A1BAB00F6AEB2 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3F07D22A2A1BAB00F6AEB2 /* UIView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +26,6 @@
 		5B3F07C82A2A1B5300F6AEB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5B3F07CA2A2A1B5300F6AEB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5B3F07D02A2A1B6800F6AEB2 /* SecureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureView.swift; sourceTree = "<group>"; };
-		5B3F07D22A2A1BAB00F6AEB2 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +62,6 @@
 				5B3F07BE2A2A1B5300F6AEB2 /* SceneDelegate.swift */,
 				5B3F07C02A2A1B5300F6AEB2 /* ViewController.swift */,
 				5B3F07D02A2A1B6800F6AEB2 /* SecureView.swift */,
-				5B3F07D22A2A1BAB00F6AEB2 /* UIView+Extension.swift */,
 				5B3F07C22A2A1B5300F6AEB2 /* Main.storyboard */,
 				5B3F07C52A2A1B5300F6AEB2 /* Assets.xcassets */,
 				5B3F07C72A2A1B5300F6AEB2 /* LaunchScreen.storyboard */,
@@ -101,7 +98,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1430;
-				LastUpgradeCheck = 1430;
+				LastUpgradeCheck = 1600;
 				TargetAttributes = {
 					5B3F07B82A2A1B5200F6AEB2 = {
 						CreatedOnToolsVersion = 14.3;
@@ -147,7 +144,6 @@
 				5B3F07C12A2A1B5300F6AEB2 /* ViewController.swift in Sources */,
 				5B3F07D12A2A1B6800F6AEB2 /* SecureView.swift in Sources */,
 				5B3F07BD2A2A1B5300F6AEB2 /* AppDelegate.swift in Sources */,
-				5B3F07D32A2A1BAB00F6AEB2 /* UIView+Extension.swift in Sources */,
 				5B3F07BF2A2A1B5300F6AEB2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -210,6 +206,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -270,6 +267,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -295,7 +293,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7R349V9T6D;
+				DEVELOPMENT_TEAM = U6A26A79T8;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SecureYourView/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -324,7 +322,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7R349V9T6D;
+				DEVELOPMENT_TEAM = U6A26A79T8;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SecureYourView/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

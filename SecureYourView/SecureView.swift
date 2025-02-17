@@ -10,7 +10,7 @@ import UIKit
 
 class SecureView: UIView {
     
-    fileprivate var secureField: UITextField!
+    fileprivate var secureField: UITextField = UITextField()
         
     // toggle this value to enable or disable
     // the secure behaviour
@@ -31,12 +31,7 @@ class SecureView: UIView {
     
     // add your content in this view
     // it will be secure
-    private(set) var contentView: UIView = {
-        let hiddenView = UIView()
-//        hiddenView.makeSecure()
-        hiddenView.translatesAutoresizingMaskIntoConstraints = false
-        return hiddenView
-    }()
+    private(set) var contentView: UIView!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -49,8 +44,11 @@ class SecureView: UIView {
     
     fileprivate func setupView() {
         
-        // set content view secure
-        secureField = contentView.makeSecure()
+        contentView = secureField.subviews.first ?? UIView()
+        contentView.translatesAutoresizingMaskIntoConstraints = false
+        contentView.removeFromSuperview()
+        
+        isSecure = true
         
         self.addSubview(placeholderView)
         self.addSubview(contentView)
